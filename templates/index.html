@@ -1,5 +1,4 @@
 {% load static %}
-{% static "images" as baseUrl %}
 <! DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +51,7 @@ https://templatemo.com/tm-537-art-factory
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#welcome" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="#accounts/register">Register</a></li>
                             <li class="scroll-to-section"><a href="#services">Services</a></li>
                             <li class="scroll-to-section"><a href="#frequently-question">Frequently Questions</a></li>
                             <li class="submenu">
@@ -179,7 +178,7 @@ https://templatemo.com/tm-537-art-factory
                     {% for box in boxed %}
                     <div class="item service-item">
                         <div class="icon">
-                            <i><img src="{{baseUrl}}/{{box.img}}" alt=""></i>
+                            <i><img src="{{box.img.url}}" alt=""></i>
                         </div>
                         <h5 class="service-title">{{box.name}}</h5>
                         <p>{{box.desc}}</p>
